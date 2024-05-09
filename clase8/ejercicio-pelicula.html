@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peliculas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-200">
+    <h1 class="text-center text-3xl font-bold my-4">Peliculas</h1>
+    <div
+      class="bg-white rounded overflow-hidden shadow-lg p-6 mx-auto max-w-md mt-4">
+      <form id="formPelicula" class="flex flex-col">
+        <h2 class="text-xl font-bold mb-2">Agregar Película</h2>
+        <input
+          type="text"
+          id="titulo"
+          placeholder="Título"
+          required
+          class="border-2 border-gray-300 p-2 rounded-lg mb-2" />
+        <input
+          type="text"
+          id="director"
+          placeholder="Director"
+          required
+          class="border-2 border-gray-300 p-2 rounded-lg mb-2" />
+        <input
+          type="text"
+          id="genero"
+          placeholder="Género"
+          required
+          class="border-2 border-gray-300 p-2 rounded-lg mb-2" />
+        <input
+          type="number"
+          id="anio"
+          placeholder="Año"
+          required
+          class="border-2 border-gray-300 p-2 rounded-lg mb-2" />
+        <button type="submit" class="bg-blue-500 text-white p-2 rounded-lg">
+          Agregar Película
+        </button>
+      </form>
+
+      <hr class="my-4 border-1 border-blue-400" />
+
+      <h2 class="text-xl font-bold mr-2 my-4">Eliminar Película</h2>
+      <div class="flex justify-center items-center">
+        <input
+          type="text"
+          id="search"
+          placeholder="Buscar pelicula"
+          class="border-2 border-gray-300 p-2 rounded-lg mr-2" />
+        <button id="btn" class="bg-blue-500 text-white p-2 rounded-lg">
+          Buscar
+        </button>
+      </div>
+    </div>
+    <div id="pelicula" class="mt-4"></div>
+  </body>
+  <script src="ejercicio-pelicula.js"></script>
+</html>
