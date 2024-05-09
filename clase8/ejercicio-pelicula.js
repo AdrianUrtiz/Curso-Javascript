@@ -145,13 +145,13 @@ document.getElementById('btn').addEventListener('click', function () {
   )
 
   if (peliculaIndex !== -1) {
-    let pelicula = peliculas[peliculaIndex]
+    let { titulo, director, genero, anio } = peliculas[peliculaIndex]
     document.getElementById('pelicula').innerHTML = `
       <div class="bg-white rounded overflow-hidden shadow-lg p-6 mx-auto max-w-md">
-        <h2 class="text-2xl font-bold mb-2">${pelicula.titulo}</h2>
-        <p><strong>Director:</strong> ${pelicula.director}</p>
-        <p><strong>Género:</strong> ${pelicula.genero}</p>
-        <p><strong>Año:</strong> ${pelicula.anio}</p>
+        <h2 class="text-2xl font-bold mb-2">${titulo}</h2>
+        <p><strong>Director:</strong> ${director}</p>
+        <p><strong>Género:</strong> ${genero}</p>
+        <p><strong>Año:</strong> ${anio}</p>
         <button id="eliminar" class="mt-4 bg-red-500 text-white px-4 py-2 rounded">Eliminar</button>
       </div>
     `
